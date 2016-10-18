@@ -19,10 +19,28 @@ var utils = {
     }
   },
 
-  displayTv: function(){
-    var tv = utils.template('#TV');
-    $(tv).appendTo('main').each(function(){
-      whiteNoise.turnOn();
-    });
+  ignoreWords: [
+    'the',
+    'a',
+    'of',
+    'and',
+    'is',
+    'or',
+    '&',
+    '$'
+  ],
+
+  stripWords: function(array){
+
+    for (var index = array.length - 1; index >= 0; index--){
+      array[index] = array[index].toLowerCase();
+      for (var ignoreIndex = 0; ignoreIndex < utils.ignoreWords.length; ignoreIndex++){
+        if (array[index] === utils.ignoreWords[ignoreIndex]){
+          array.splice(index, 1);
+        }
+      }
+    }
+    return array;
   }
+
 };

@@ -21,7 +21,7 @@ main {
 main * {
   display: inline-block;
   font-family: 'Slabo 27px', serif;
-  font-size: 20px;
+  font-size: 14px;
   box-sizing: border-box;
 }
 
@@ -31,7 +31,7 @@ main * {
   background: blue;
   border-radius: 2px;
   padding: 20px;
-  opacity: 0; 
+  opacity: 0;
   transition: all ease 2s;
 
   &.on {
@@ -54,5 +54,11 @@ main * {
   p {
     color: white;
     text-shadow: 1px 1px black;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    color: yellow;
+    text-shadow: 1px 1px black;    
   }
 }
