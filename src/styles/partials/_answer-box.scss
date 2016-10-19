@@ -1,0 +1,20 @@
+.answer-box {
+  position: absolute;
+  bottom: -1000px;
+  transform-origin: center;
+  transform: translateX(-50%);
+  transition:
+    bottom 1s ease,
+    opacity 2s;
+  opacity: 0;
+  .answer-field{
+    font-size: 30px;
+  }
+  &.popUp {
+    bottom: -80px;
+    transition:
+      bottom 2s ease,
+      opacity 3s;
+    opacity: 1;
+  }
+}

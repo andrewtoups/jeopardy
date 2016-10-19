@@ -1,0 +1,38 @@
+.monitor {
+  width: 100%;
+  height: 100%;
+  background: blue;
+  border-radius: 2px;
+  padding: 20px;
+  // opacity: 0;
+  display: none;
+  transition: display ease 2s;
+
+  &.on {
+    opacity: 1;
+    transition: display ease 2s;
+  }
+
+  &.right {
+    background: url('../images/trebek-right.png') no-repeat top;
+    background-size: cover;
+  }
+
+  &.wrong {
+    background: url('../images/trebek-wrong.png') no-repeat top;
+    background-size: cover;
+  }
+
+  @include screenMask();
+
+  p {
+    color: white;
+    text-shadow: 1px 1px black;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    color: yellow;
+    text-shadow: 1px 1px black;
+  }
+}

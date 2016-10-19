@@ -1,0 +1,27 @@
+@keyframes scoreBG
+{
+  0%   {background: mediumblue;}
+  50%  {background: darkblue;}
+  100% {background: mediumblue;}
+}
+
+@-webkit-keyframes scoreBG
+{
+  0%   {background: mediumblue;}
+  50%  {background: darkblue;}
+  100% {background: mediumblue;}
+}
+
+@keyframes scoreText
+{
+  0%   {color: midnightblue;}
+  50%  {color: lightblue;}
+  100% {color: midnightblue;}
+}
+
+@-webkit-keyframes scoreText
+{
+  0%   {color: midnightblue;}
+  50%  {color: lightblue;}
+  100% {color: midnightblue;}
+}

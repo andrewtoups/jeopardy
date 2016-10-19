@@ -1,8 +1,17 @@
-@import 'partials/television';
 @import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+@import 'partials/mixins';
+@import 'partials/animations';
+@import 'partials/television';
+@import 'partials/monitor';
+@import 'partials/answer-box';
+@import 'partials/score-card';
 
 body * {
   text-align: center;
+  & ul {
+    list-style: none;
+    padding-left: 0;
+  }
 }
 
 body {
@@ -16,6 +25,7 @@ main {
   height: 100%;
   width: 100%;
   position: absolute;
+  @include screenMask(.5);
 }
 
 main * {
@@ -23,74 +33,4 @@ main * {
   font-family: 'Slabo 27px', serif;
   font-size: 14px;
   box-sizing: border-box;
-}
-
-.monitor {
-  width: 100%;
-  height: 100%;
-  background: blue;
-  border-radius: 2px;
-  padding: 20px;
-  // opacity: 0;
-  display: none;
-  transition: display ease 2s;
-
-  &.on {
-    opacity: 1;
-    transition: display ease 2s;
-  }
-
-  &.right {
-    background: url('../images/trebek-right.png') no-repeat top;
-    background-size: cover;
-  }
-
-  &.wrong {
-    background: url('../images/trebek-wrong.png') no-repeat top;
-    background-size: cover;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: .1;
-    background: url('../images/TV-mask.png');
-    background-size: 100% 100%;
-    background-position: center;
-  }
-  p {
-    color: white;
-    text-shadow: 1px 1px black;
-  }
-
-  h3 {
-    text-transform: uppercase;
-    color: yellow;
-    text-shadow: 1px 1px black;
-  }
-}
-
-.answer-box {
-  position: absolute;
-  bottom: -1000px;
-  transform-origin: center;
-  transform: translateX(-50%);
-  transition:
-    bottom 1s ease,
-    opacity 2s;
-  opacity: 0;
-  .answer-field{
-    font-size: 30px;
-  }
-  &.popUp{
-    bottom: -80px;
-    transition:
-      bottom 2s ease,
-      opacity 3s;
-    opacity: 1;
-  }
 }

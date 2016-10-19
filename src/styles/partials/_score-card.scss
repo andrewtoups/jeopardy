@@ -1,0 +1,33 @@
+.scoreCard {
+
+  position: absolute;
+  left: -100px;
+  animation: scoreBG 2s infinite,
+             scoreText 2s infinite;
+  -webkit-animation: scoreBG 2s infinite,
+                     scoreText 2s infinite;
+  padding: 5px;
+  border-radius: 3px;
+  border: 2px solid #e8b456;
+  display: none;
+
+  @include screenMask(.3);
+  .stats {
+    display: block;
+  }
+  .stats * {
+    text-align: left;
+    display: block;
+    text-transform: uppercase;
+  }
+
+  .scoreAlert {
+    text-align: left;
+    display: none;
+    font-size: 30px;
+    color: yellow;
+    position: absolute;
+    z-index: 3;
+    width: 500px;
+  }
+}
