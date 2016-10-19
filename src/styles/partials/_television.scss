@@ -161,6 +161,25 @@
       top: 9px;
       left: 17px;
     }
+    &:active {
+      &:after, &:before {
+        background: yellow;
+      }
+      &:after {
+        box-shadow:
+          24px 29px 0 0 yellow,
+
+          26px 29px 0 0 darken(#f4f5f5, 7%),
+          2px 0 0 0 darken(#f4f5f5, 7%);
+      }
+      &:before {
+        box-shadow:
+          0 38px 0 0 yellow,
+
+          2px 40px 2px 0 darken(#a49870, 10%),
+          2px 2px 2px 0 darken(#a49870, 10%);
+      }
+    }
   }
 
   .controls-2 {
